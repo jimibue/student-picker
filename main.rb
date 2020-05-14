@@ -2,6 +2,7 @@ students = ["Leveille, Andre", "AshWorth, Ryan", "Biddinger, Caden", "Mbia, Arse
 
 # my task now is to create a group randomizer
 
+# create a new list w array of hashes with keys fist_name and last_name
 students_formated = students.map do |student|
   # need to seperate out first and last from original string
   name_arr = student.split(",")
@@ -11,10 +12,27 @@ students_formated = students.map do |student|
   { first_name: first, last_name: last }
 end
 
-p students_formated
-# create a nelast w array of hashes with keys fist_name and last_name
+# with the newly create array i want to randomly select people and pull and assing into groups
 
-# with the newly create array i want to randomly people and pull and assing into groups
+#shuffle stundents
+students_formated.shuffle!
+
+# {name: 'group1', memebers: [students_formated.pop, students_formated.pop ]}
+
+groups = []
+
+5.times do |i|
+  groups.push({ name: "group#{i + 1}", members: [students_formated.pop, students_formated.pop] })
+end
+
+# here we need to handle last person since we have a odd number
+# randomly select a group and and add last student to members
+index = rand(groups.size)
+
+groups[index][:members].push(students_formated.pop)
+
+p groups
+p students_formated.size
 
 # print outadd groups in a slack friendly format
 
