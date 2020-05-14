@@ -2,8 +2,18 @@ students = ["Leveille, Andre", "AshWorth, Ryan", "Biddinger, Caden", "Mbia, Arse
 
 # my task now is to create a group randomizer
 
-# create a new array of hashes with key fist_name and last_name
+students_formated = students.map do |student|
+  # need to seperate out first and last from original string
+  name_arr = student.split(",")
+  first = name_arr[1].strip
+  last = name_arr[0].strip
+
+  { first_name: first, last_name: last }
+end
+
+p students_formated
+# create a nelast w array of hashes with keys fist_name and last_name
 
 # with the newly create array i want to randomly people and pull and assing into groups
 
-# print out groups in a slack friendly format
+# print outadd groups in a slack friendly format
