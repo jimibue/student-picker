@@ -17,3 +17,5 @@ p students_formated
 # with the newly create array i want to randomly people and pull and assing into groups
 
 # print outadd groups in a slack friendly format
+
+# changed main.rb
