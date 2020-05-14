@@ -1,3 +1,3 @@
-password = "CHANGED AGAINED FROM TEAM MEMEBER"
+password = "THIS IS THE RIGHT PASSWORD"
 
 #changed pasword
