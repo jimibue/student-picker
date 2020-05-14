@@ -31,9 +31,18 @@ index = rand(groups.size)
 
 groups[index][:members].push(students_formated.pop)
 
-p groups
-p students_formated.size
+# p groups
+# p students_formated.size
 
 # print outadd groups in a slack friendly format
 
+groups.each do |group|
+  puts group[:name]
+  # this an array of members
+  puts "--------"
+  group[:members].each do |member|
+    puts "#{member[:first_name]} #{member[:last_name]}"
+  end
+  puts "xxxxxx"
+end
 # changed main.rb
